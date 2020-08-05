@@ -10,7 +10,12 @@ public class App {
     public static void main(String[] args) {
 
         Scanner myInput = new Scanner(System.in);
-        File myObj = new File("Notes.txt");
+
+        System.out.println("Enter a Filename you want too save as");
+
+        String fileName = myInput.nextLine();
+
+        File myObj = new File(fileName + ".txt");
         try{
             
             if(myObj.createNewFile()){
